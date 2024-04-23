@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import first_page
+from forms import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", first_page),
+    path("", views.first_page),
+    path("phandomat_page/", views.phandomat_page_open, name="phandomat_page")
 ]
